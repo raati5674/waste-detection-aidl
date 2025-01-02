@@ -173,6 +173,6 @@ logs/
 checkpoints/
 #data/
 batch*
-test_annotations
-train_annotations
-validation_annotations
+test_annotations.json
+train_annotations.json
+validation_annotations.json
