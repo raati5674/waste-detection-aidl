@@ -175,4 +175,4 @@ checkpoints/
 batch*
 test_annotations
 train_annotations
-validations_annotations
+validation_annotations
