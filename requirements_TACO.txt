@@ -8,3 +8,4 @@ seaborn
 graphviz
 Cython
 pycocotools
+scikit-learn
