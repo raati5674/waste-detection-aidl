@@ -30,10 +30,10 @@ To split the annotations for training and evaluation use ``split_dataset.py``. I
 ```
 python split_dataset.py --dataset_dir ./data [--test_percentage <0.1>] [--val_percentage <0.1>] [--seed <123>] [--verbose <False>]
 ```
-Use ``--test_percentage`` if you want to use a test split different than default 0.1 (10%).
-Use ``--val_percentage`` if you want to use a validation split different than default 0.1 (10%).
-Use ``--seed`` if you want to have a different random output. Default 123.
-Use ``--verbose`` if you want to have printed text on the console during execution.
+* Use ``--test_percentage`` if you want to use a test split different than default 0.1 (10%).
+* Use ``--val_percentage`` if you want to use a validation split different than default 0.1 (10%).
+* Use ``--seed`` if you want to have a different random output. Default 123.
+* Use ``--verbose`` if you want to have printed text on the console during execution.
 
 
 
