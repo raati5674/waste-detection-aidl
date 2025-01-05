@@ -9,3 +9,6 @@ graphviz
 Cython
 pycocotools
 scikit-learn
+torch
+Pillow
+opencv-python
