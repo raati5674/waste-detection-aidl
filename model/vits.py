@@ -2,9 +2,9 @@ import torch
 from torch import nn
 import torch
 
-from model.patchembeddings import PatchEmbedding
+from project.model.patchembeddings_old import PatchEmbedding
 
-from model.multiheadattention import MultiHeadAttention
+from project.model.multiheadattention_old import MultiHeadAttention
 
 class ViTMLP(nn.Module):
     def __init__(self,

@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-from model.dotproductiattenttion import DotProductAttention
+from project.model.dotproductiattenttion_old import DotProductAttention
 
 class MultiHeadAttention(nn.Module):  #@save
     """Multi-head attention."""

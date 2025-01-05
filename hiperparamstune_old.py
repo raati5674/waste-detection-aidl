@@ -15,11 +15,11 @@ from ray.train import RunConfig
 import tempfile
 
 
-from datasets.FashionMNIST import TraintMNIST,ValidationMNIST
+from project.datasets.FashionMNIST_old import TraintMNIST,ValidationMNIST
 
 from model.vits import ViT
-from trainer.trainergvits import TrainerViTs
-from logger.dummyloger import DummyLogger
+from project.trainer.trainergvits_old import TrainerViTs
+from project.logger.dummyloger_old import DummyLogger
 
 #to repeat the experiments.
 torch.manual_seed(0)

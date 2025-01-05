@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import numpy as np
 from typing import Tuple,Callable
-from logger.logger import Logger
-from logger.dummyloger import DummyLogger
+from project.logger.logger_old import Logger
+from project.logger.dummyloger_old import DummyLogger
 
 class Trainer():
     

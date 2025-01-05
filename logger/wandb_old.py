@@ -3,12 +3,12 @@ import pandas as pd
 
 import torch
 import torch.nn as nn
-import wandb
+import project.logger.wandb_old as wandb_old
 import matplotlib.pyplot as plt
 
-from logger import Logger
+from project.logger.logger_old import Logger
 from datetime import datetime
-from logger import TaskType
+from project.logger.logger_old import TaskType
 from typing import Optional
 
 
@@ -19,12 +19,12 @@ class WandbLogger(Logger):
         task: TaskType, 
         model: nn.Module,
     ):
-        wandb.login()
-        wandb.init(project="hands-on-monitoring")
-        wandb.run.name = f'{task}-{datetime.now().strftime("%Y%m%d-%H%M%S")}'
+        wandb_old.login()
+        wandb_old.init(project="hands-on-monitoring")
+        wandb_old.run.name = f'{task}-{datetime.now().strftime("%Y%m%d-%H%M%S")}'
 
         # Log weights and gradients
-        wandb.watch(model, log_freq=100)
+        wandb_old.watch(model, log_freq=100)
         
 
     def log_classification_training(
@@ -36,14 +36,14 @@ class WandbLogger(Logger):
         val_acc_avg: np.ndarray
     ):
         # Log validation metrics
-        wandb.log({
+        wandb_old.log({
             "Classification/val_loss": val_loss_avg,
             "Classification/val_acc": val_acc_avg,
             "epoch": epoch
         })
 
         # Log training metrics
-        wandb.log({
+        wandb_old.log({
             "Classification/train_loss": train_loss_avg,
             "Classification/train_acc": train_acc_avg,
             "epoch": epoch
@@ -87,7 +87,7 @@ class WandbLogger(Logger):
         epoch:int,
         fig: plt.Figure
     ):
-        wandb.log({
-            "Classification/confusion_matrix": wandb.Image(fig),
+        wandb_old.log({
+            "Classification/confusion_matrix": wandb_old.Image(fig),
             "epoch": epoch
         })

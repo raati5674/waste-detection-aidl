@@ -5,12 +5,12 @@ from torch.utils.data import DataLoader
 from datasets.FashionMNIST import TraintMNIST,ValidationMNIST
 from torch.utils.data import DataLoader
 
-from trainer.trainergvits import TrainerViTs
+from project.trainer.trainergvits_old import TrainerViTs
 
 from model.vits import ViT
 
-from logger.tensorboard import TensorboardLogger
-from logger.logeractivity import TaskType
+from project.logger.tensorboard_old import TensorboardLogger
+from project.logger.logeractivity_old import TaskType
 import random
 import numpy as np
 import os

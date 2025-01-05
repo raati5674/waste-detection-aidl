@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 
 from datetime import datetime
 from typing import Tuple
-from logger.logger import Logger
+from project.logger.logger_old import Logger
 from torch.utils.tensorboard import SummaryWriter
 #import torchvision
-from logger.logeractivity import TaskType
+from project.logger.logeractivity_old import TaskType
 
 class TensorboardLogger(Logger):
 

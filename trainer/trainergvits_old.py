@@ -3,9 +3,9 @@ import torch.nn as nn
 import numpy as np
 from typing import Tuple,Callable
 
-from trainer.trainer import Trainer
-from logger.logger import Logger
-from logger.dummyloger import DummyLogger
+from project.trainer.trainer_old import Trainer
+from project.logger.logger_old import Logger
+from project.logger.dummyloger_old import DummyLogger
 
 class TrainerViTs(Trainer):    
     def __init__(self,

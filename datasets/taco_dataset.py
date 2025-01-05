@@ -8,13 +8,14 @@ import cv2
 import numpy as np
 
 class TacoDataset(Dataset):
-    """∫
+    """
     Custom dataset for waste segmentation and classification using TACO dataset in COCO format
     
     params:
     - annotations_file: path to the annotations file
     - img_dir: path to the image directory
     - transforms: list of transformations to apply to the images
+    - task: task type (SEGMENTATION or CLASSIFICATION)
 
     returns:
     In case of segmentation task:
@@ -183,8 +184,8 @@ class TacoDataset(Dataset):
             raise TypeError("This should never be reached error in TaskType")
         
         
-
-taco_dataset = TacoDataset(annotations_file='data/train_annotations.json', img_dir='data', task=TaskType.SEGMENTATION)
-print(taco_dataset[0])
+# TESTING THE DATASET
+# taco_dataset = TacoDataset(annotations_file='data/train_annotations.json', img_dir='data', task=TaskType.SEGMENTATION)
+# print(taco_dataset[0])
 
     
