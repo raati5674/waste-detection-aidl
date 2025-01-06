@@ -10,5 +10,6 @@ Cython
 pycocotools
 scikit-learn
 torch
+torchvision
 Pillow
 opencv-python
