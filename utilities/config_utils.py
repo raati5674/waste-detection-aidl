@@ -11,3 +11,7 @@ class LoggerType(Enum):
 class TaskType(Enum):
     SEGMENTATION = auto()
     CLASSIFICATION = auto()
+
+class ClassificationCategoryType(Enum):
+    CATEGORY = auto()
+    SUPERCATEGORY = auto()

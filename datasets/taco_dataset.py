@@ -2,7 +2,8 @@ from torch.utils.data import Dataset
 from pycocotools.coco import COCO
 import os
 from PIL import Image
-from utilities.config_utils import TaskType
+from utilities.config_utils import TaskType, ClassificationCategoryType
+from utilities.get_supercategory_by_id import get_supercategory_by_id
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
@@ -16,6 +17,7 @@ class TacoDataset(Dataset):
     - img_dir: path to the image directory
     - transforms: list of transformations to apply to the images
     - task: task type (SEGMENTATION or CLASSIFICATION)
+    - cls_category: classification category type (CATEGORY or SUPERCATEGORY)
 
     returns:
     In case of segmentation task:
@@ -27,7 +29,7 @@ class TacoDataset(Dataset):
     """
 
 
-    def __init__(self, annotations_file: str, img_dir: str, transforms=None, task: TaskType=TaskType.SEGMENTATION) -> None:
+    def __init__(self, annotations_file: str, img_dir: str, transforms=None, task: TaskType=TaskType.SEGMENTATION, cls_category: ClassificationCategoryType = ClassificationCategoryType.SUPERCATEGORY) -> None:
         """ Constructor for the TacoDataset class """
         super().__init__()
 
@@ -37,6 +39,7 @@ class TacoDataset(Dataset):
         assert task in TaskType, f"Invalid task type: {task}"
 
         self.task = task
+        self.cls_category = cls_category
         self.coco_data = COCO(annotations_file)
         self.img_dir = img_dir
         self.transforms = transforms
@@ -105,6 +108,10 @@ class TacoDataset(Dataset):
         
         # In case of segmentation task
         elif self.task == TaskType.SEGMENTATION:
+            # Check if idx is within the valid range of indices
+            if idx < 0 or idx >= len(self.img_ids):
+                raise IndexError(f"Index {idx} out of range. Valid range is 0 to {len(self.img_ids) - 1}.")
+            
             # Pick the image id based on given index
             img_id = self.img_ids[idx]
             # Load the image details using Coco API and image id
@@ -134,7 +141,10 @@ class TacoDataset(Dataset):
         
         # In case of classification task
         elif self.task == TaskType.CLASSIFICATION:
-
+            # Check if idx is within the valid range of indices
+            if idx < 0 or idx >= len(self.anns_ids):
+                raise IndexError(f"Index {idx} out of range. Valid range is 0 to {len(self.anns_ids) - 1}.")
+            
             # Pick the annotation id based on given index
             ann_id = self.anns_ids[idx]
             annotation = self.coco_data.loadAnns(ann_id)[0]
@@ -142,6 +152,11 @@ class TacoDataset(Dataset):
             category_id = annotation['category_id']
             # label = self.coco_data.loadCats(category_id)
             img_id = annotation['image_id']
+
+            # Map to super category if required
+            if self.cls_category == ClassificationCategoryType.SUPERCATEGORY:
+                category_id = get_supercategory_by_id(category_id)
+                # print(f"super category_id has been obtained: {category_id}")
 
             # Load the image details using Coco API and image id
             img_coco_data = self.coco_data.loadImgs(img_id)[0] # The dict contains id, file_name, height, width, license and paths
@@ -175,6 +190,11 @@ class TacoDataset(Dataset):
             # Apply transformations to the image if they are provided
             if self.transforms:
                 sample_img = self.transforms(sample_img)
+
+            # plt.imshow(sample_img)
+            # plt.savefig("output_test_image.png")
+            # plt.show()
+            # print(f"category_id for image with index {idx}: {category_id}")
             
             # Return the image in numpy array format and the category id
             return sample_img, category_id
@@ -186,6 +206,6 @@ class TacoDataset(Dataset):
         
 # TESTING THE DATASET
 # taco_dataset = TacoDataset(annotations_file='data/train_annotations.json', img_dir='data', task=TaskType.SEGMENTATION)
-# print(taco_dataset[0])
-
+# taco_dataset = TacoDataset(annotations_file='data/train_annotations.json', img_dir='data', task=TaskType.CLASSIFICATION)
+# print(taco_dataset[30])
     

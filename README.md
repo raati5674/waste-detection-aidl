@@ -8,6 +8,16 @@ A vision transformer (ViT) is trained and evaluated to segment and classify wast
 
 ### Requirements 
 
+Create a conda environment by running
+```
+conda create --name waste-management python=3.12.8
+```
+
+Then, activate the environment
+```
+conda activate waste-management
+```
+
 To install the required python packages simply type
 ```
 pip3 install -r requirements_TACO.txt
@@ -21,7 +31,7 @@ python download.py
 
 ### Exploratory data analysis
 
-Explore the notebook ``demo.pynb``, modified version of the original notebook from the [TACO Repository](https://github.com/pedropro/TACO) that inspects the dataset.
+Explore the notebook ``demo.ipynb``, modified version of the original notebook from the [TACO Repository](https://github.com/pedropro/TACO) that inspects the dataset.
 The dataset is in COCO format. It contains the source pictures, anotations and labels. For more details related with the datasource please refer to [TACO Repository](https://github.com/pedropro/TACO).
 
 ### Split annotations in train, validation and test
@@ -58,6 +68,10 @@ train_dataset = TacoDataset(annotations_file='data/train_annotations.json', img_
 - ``sample_img``: image numpy array
 - ``category_id``: category id
 
+#### Hint
+If when running ``datasets/taco_dataset.py`` you get the following error ``ModuleNotFoundError: No module named 'utilities'`` this can be solved by adding the project directory to the PYTHONPATH with ``export PYTHONPATH="/path/to/project:$PYTHONPATH"``
+
+### train.py
 
 
 
