@@ -6,7 +6,7 @@ from torchvision import transforms
 from PIL import Image
 from transformers import AutoModelForImageClassification, AutoProcessor
 
-# Define the new mapping for 6 classes
+# 6 new classes:
 RECLASSIFY_MAPPING = {
     # Plastic
     "Bottle cap": "Plastic",
