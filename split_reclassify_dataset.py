@@ -9,7 +9,6 @@ CATEGORY_MAPPING = {
         "Bottle cap", "Blister pack", "Bottle", "Lid", "Other plastic",
         "Plastic bag & wrapper", "Plastic container", "Plastic gloves",
         "Plastic utensils", "Squeezable tube", "Straw", "Styrofoam piece"
-        
     ],
     "Metal": [
         "Aluminium foil", "Can", "Pop tab", "Scrap metal", "Battery"
@@ -39,7 +38,7 @@ parser = argparse.ArgumentParser(description='Split dataset into training, valid
 parser.add_argument('--dataset_dir', required=True, help='Path to dataset annotations', type=str)
 parser.add_argument('--test_percentage', required=False, help='Percentage of images used for the testing set', type=float, default=0.10)
 parser.add_argument('--val_percentage', required=False, help='Percentage of images used for the validation set', type=float, default=0.10)
-parser.add_argument('--seed', required=False, help='Random seed for the split', type=int, default=123)
+parser.add_argument('--seed', required=False, help='Random seed for the split', type=int, default=234)
 parser.add_argument('--verbose', required=False, help='Print information about the split', type=bool, default=False)
 
 args = parser.parse_args()

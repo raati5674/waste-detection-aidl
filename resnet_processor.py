@@ -6,27 +6,75 @@ from torchvision import transforms
 from PIL import Image
 from transformers import AutoModelForImageClassification, AutoProcessor
 
+# Define the new mapping for 6 classes
+RECLASSIFY_MAPPING = {
+    # Plastic
+    "Bottle cap": "Plastic",
+    "Blister pack": "Plastic",
+    "Bottle": "Plastic",
+    "Lid": "Plastic",
+    "Other plastic": "Plastic",
+    "Plastic bag & wrapper": "Plastic",
+    "Plastic container": "Plastic",
+    "Plastic gloves": "Plastic",
+    "Plastic utensils": "Plastic",
+    "Squeezable tube": "Plastic",
+    "Straw": "Plastic",
+    "Styrofoam piece": "Plastic",
+    # Metal
+    "Aluminium foil": "Metal",
+    "Can": "Metal",
+    "Pop tab": "Metal",
+    "Scrap metal": "Metal",
+    "Battery": "Metal",
+    # Glass
+    "Broken glass": "Glass",
+    "Glass jar": "Glass",
+    # Paper/Cardboard
+    "Carton": "Paper/Cardboard",
+    "Paper": "Paper/Cardboard",
+    "Paper bag": "Paper/Cardboard",
+    # Organic
+    "Food waste": "Organic",
+    "Rope & strings": "Organic",
+    # Miscellaneous
+    "Shoe": "Miscellaneous",
+    "Cigarette": "Miscellaneous",
+    "Unlabeled litter": "Miscellaneous",
+}
+
 # Use the processor's feature extractor for preprocessing
 processor = AutoProcessor.from_pretrained("microsoft/resnet-50")
 
 class TACOClassificationDataset(Dataset):
-    def __init__(self, annotations_file, root_dir, processor):
+    def __init__(self, annotations_file, root_dir, processor, reclassify_mapping):
         with open(annotations_file, 'r') as f:
             self.annotations = json.load(f)
         self.root_dir = root_dir
         self.processor = processor
         self.image_annotations = self.annotations['images']
-        self.annotations_mapping = {
+        self.reclassify_mapping = reclassify_mapping
+
+        # Build mapping for image IDs and new labels
+        self.image_id_to_file_name = {
             image['id']: image['file_name'] for image in self.image_annotations
         }
-        self.labels_mapping = {
+        self.category_id_to_name = {
             category['id']: category['name'] for category in self.annotations['categories']
         }
-        self.annotations_by_image = {}
+        self.image_id_to_labels = {}
         for annotation in self.annotations['annotations']:
-            if annotation['image_id'] not in self.annotations_by_image:
-                self.annotations_by_image[annotation['image_id']] = []
-            self.annotations_by_image[annotation['image_id']].append(annotation['category_id'])
+            image_id = annotation['image_id']
+            category_id = annotation['category_id']
+            category_name = self.category_id_to_name[category_id]
+            new_category = self.reclassify_mapping.get(category_name, "Miscellaneous")
+            if image_id not in self.image_id_to_labels:
+                self.image_id_to_labels[image_id] = []
+            self.image_id_to_labels[image_id].append(new_category)
+
+        # Finalize unique label mapping
+        self.new_labels = sorted(set(reclassify_mapping.values()))
+        self.label_to_index = {label: idx for idx, label in enumerate(self.new_labels)}
 
     def __len__(self):
         return len(self.image_annotations)
@@ -40,12 +88,11 @@ class TACOClassificationDataset(Dataset):
         encoding = self.processor(images=image, return_tensors="pt")
         pixel_values = encoding["pixel_values"].squeeze(0)  # Remove batch dimension
 
-        # Get the label (for simplicity, pick the first category ID associated with the image)
+        # Get the label (select the first reclassified label)
         image_id = image_info['id']
-        label = self.annotations_by_image[image_id][0]
-
-        # Convert label to index
-        label_index = list(self.labels_mapping.keys()).index(label)
+        labels = self.image_id_to_labels[image_id]
+        label = labels[0]  # Take the first associated label
+        label_index = self.label_to_index[label]
 
         return pixel_values, label_index
 
@@ -55,18 +102,17 @@ val_annotations_path = "data/validation_annotations.json"
 test_annotations_path = "data/test_annotations.json"
 images_root_dir = "data"
 
-
 # Update the DataLoader and Dataset Initialization
-train_dataset = TACOClassificationDataset(train_annotations_path, images_root_dir, processor)
-val_dataset = TACOClassificationDataset(val_annotations_path, images_root_dir, processor)
-test_dataset = TACOClassificationDataset(test_annotations_path, images_root_dir, processor)
+train_dataset = TACOClassificationDataset(train_annotations_path, images_root_dir, processor, RECLASSIFY_MAPPING)
+val_dataset = TACOClassificationDataset(val_annotations_path, images_root_dir, processor, RECLASSIFY_MAPPING)
+test_dataset = TACOClassificationDataset(test_annotations_path, images_root_dir, processor, RECLASSIFY_MAPPING)
 
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
 
 # Step 2: Load Pretrained ResNet-50
-num_classes = len(train_dataset.labels_mapping)
+num_classes = len(RECLASSIFY_MAPPING.values())  # Should be 6
 model = AutoModelForImageClassification.from_pretrained(
     "microsoft/resnet-50", num_labels=num_classes, ignore_mismatched_sizes=True
 )
