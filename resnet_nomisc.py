@@ -5,28 +5,39 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 from PIL import Image
 from transformers import AutoModelForImageClassification, AutoProcessor
+from torch.utils.tensorboard import SummaryWriter
+import numpy as np
+
+# TensorBoard:
+
+logs_base_dir = "resnet-50"
+os.makedirs(logs_base_dir, exist_ok=True)
+
+tb_rs_nomisc = SummaryWriter(log_dir=f'{logs_base_dir}/{logs_base_dir}_NOMISC/')
+
+
 
 # 6 new classes:
 RECLASSIFY_MAPPING = {
     # Plastic
-    "Bottle cap": "Plastic",
-    "Blister pack": "Plastic",
+    "Bottle cap": "Miscellaneous",
+    "Blister pack": "Miscellaneous",
     "Bottle": "Plastic",
-    "Lid": "Plastic",
-    "Other plastic": "Plastic",
-    "Plastic bag & wrapper": "Plastic",
+    "Lid": "Miscellaneous",
+    "Other plastic": "Miscellaneous",
+    "Plastic bag & wrapper": "Miscellaneous",
     "Plastic container": "Plastic",
-    "Plastic gloves": "Plastic",
+    "Plastic gloves": "Miscellaneous",
     "Plastic utensils": "Plastic",
-    "Squeezable tube": "Plastic",
-    "Straw": "Plastic",
-    "Styrofoam piece": "Plastic",
+    "Squeezable tube": "Miscellaneous",
+    "Straw": "Miscellaneous",
+    "Styrofoam piece": "Miscellaneous",
     # Metal
     "Aluminium foil": "Metal",
     "Can": "Metal",
-    "Pop tab": "Metal",
-    "Scrap metal": "Metal",
-    "Battery": "Metal",
+    "Pop tab": "Miscellaneous",
+    "Scrap metal": "Miscellaneous",
+    "Battery": "Miscellaneous",
     # Glass
     "Broken glass": "Glass",
     "Glass jar": "Glass",
@@ -35,8 +46,8 @@ RECLASSIFY_MAPPING = {
     "Paper": "Paper/Cardboard",
     "Paper bag": "Paper/Cardboard",
     # Organic
-    "Food waste": "Organic",
-    "Rope & strings": "Organic",
+    "Food waste": "Miscellaneous",
+    "Rope & strings": "Miscellaneous",
     # Miscellaneous
     "Shoe": "Miscellaneous",
     "Cigarette": "Miscellaneous",

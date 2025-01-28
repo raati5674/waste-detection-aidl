@@ -13,7 +13,7 @@ if not os.path.exists(save_directory):
     raise FileNotFoundError(f"The directory '{save_directory}' does not exist. Ensure the model is saved properly.")
 
 # Load the model and processor from the local directory
-model = AutoModelForImageClassification.from_pretrained(save_directory, ignore_mismatched_sizes=True)
+model = AutoModelForImageClassification.from_pretrained(save_directory, ignore_mismatched_sizes=True )
 processor = AutoProcessor.from_pretrained(save_directory)
 
 # Move the model to the appropriate device
