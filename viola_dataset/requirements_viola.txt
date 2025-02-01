@@ -1,0 +1,15 @@
+dataset
+requests
+jupyter
+numpy
+pandas
+matplotlib
+seaborn
+Cython
+pycocotools
+scikit-learn
+torch
+torchvision
+transformers
+tqdm
+tensorboard

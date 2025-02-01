@@ -1,0 +1,312 @@
+image_path,label,class_name
+viola_dataset\images\image_2240.jpg,8,polystyrene
+viola_dataset\images\image_2749.jpg,9,soft plastics
+viola_dataset\images\image_2514.jpg,8,polystyrene
+viola_dataset\images\image_739.jpg,2,cardboard
+viola_dataset\images\image_636.jpg,2,cardboard
+viola_dataset\images\image_2983.jpg,10,takeaway cups
+viola_dataset\images\image_365.jpg,1,batteries
+viola_dataset\images\image_1137.jpg,4,glass
+viola_dataset\images\image_2775.jpg,9,soft plastics
+viola_dataset\images\image_1604.jpg,5,hard plastic
+viola_dataset\images\image_1893.jpg,7,paper towel
+viola_dataset\images\image_1752.jpg,7,paper towel
+viola_dataset\images\image_3053.jpg,10,takeaway cups
+viola_dataset\images\image_618.jpg,2,cardboard
+viola_dataset\images\image_2461.jpg,8,polystyrene
+viola_dataset\images\image_2967.jpg,10,takeaway cups
+viola_dataset\images\image_607.jpg,2,cardboard
+viola_dataset\images\image_1401.jpg,4,glass
+viola_dataset\images\image_3023.jpg,10,takeaway cups
+viola_dataset\images\image_52.jpg,0,aluminium
+viola_dataset\images\image_1831.jpg,7,paper towel
+viola_dataset\images\image_2009.jpg,6,paper
+viola_dataset\images\image_1203.jpg,4,glass
+viola_dataset\images\image_248.jpg,0,aluminium
+viola_dataset\images\image_952.jpg,3,disposable plates
+viola_dataset\images\image_2675.jpg,9,soft plastics
+viola_dataset\images\image_746.jpg,2,cardboard
+viola_dataset\images\image_933.jpg,3,disposable plates
+viola_dataset\images\image_966.jpg,3,disposable plates
+viola_dataset\images\image_174.jpg,0,aluminium
+viola_dataset\images\image_2093.jpg,6,paper
+viola_dataset\images\image_900.jpg,3,disposable plates
+viola_dataset\images\image_2274.jpg,8,polystyrene
+viola_dataset\images\image_2949.jpg,10,takeaway cups
+viola_dataset\images\image_2486.jpg,8,polystyrene
+viola_dataset\images\image_1187.jpg,4,glass
+viola_dataset\images\image_851.jpg,3,disposable plates
+viola_dataset\images\image_336.jpg,1,batteries
+viola_dataset\images\image_2531.jpg,9,soft plastics
+viola_dataset\images\image_396.jpg,1,batteries
+viola_dataset\images\image_2473.jpg,8,polystyrene
+viola_dataset\images\image_160.jpg,0,aluminium
+viola_dataset\images\image_1773.jpg,7,paper towel
+viola_dataset\images\image_2724.jpg,9,soft plastics
+viola_dataset\images\image_2214.jpg,6,paper
+viola_dataset\images\image_392.jpg,1,batteries
+viola_dataset\images\image_1366.jpg,4,glass
+viola_dataset\images\image_804.jpg,2,cardboard
+viola_dataset\images\image_2960.jpg,10,takeaway cups
+viola_dataset\images\image_129.jpg,0,aluminium
+viola_dataset\images\image_367.jpg,1,batteries
+viola_dataset\images\image_1715.jpg,7,paper towel
+viola_dataset\images\image_2276.jpg,8,polystyrene
+viola_dataset\images\image_456.jpg,1,batteries
+viola_dataset\images\image_2887.jpg,10,takeaway cups
+viola_dataset\images\image_1356.jpg,4,glass
+viola_dataset\images\image_238.jpg,0,aluminium
+viola_dataset\images\image_149.jpg,0,aluminium
+viola_dataset\images\image_207.jpg,0,aluminium
+viola_dataset\images\image_1499.jpg,5,hard plastic
+viola_dataset\images\image_2669.jpg,9,soft plastics
+viola_dataset\images\image_969.jpg,3,disposable plates
+viola_dataset\images\image_71.jpg,0,aluminium
+viola_dataset\images\image_3002.jpg,10,takeaway cups
+viola_dataset\images\image_648.jpg,2,cardboard
+viola_dataset\images\image_1793.jpg,7,paper towel
+viola_dataset\images\image_885.jpg,3,disposable plates
+viola_dataset\images\image_1245.jpg,4,glass
+viola_dataset\images\image_1088.jpg,3,disposable plates
+viola_dataset\images\image_305.jpg,1,batteries
+viola_dataset\images\image_1073.jpg,3,disposable plates
+viola_dataset\images\image_2052.jpg,6,paper
+viola_dataset\images\image_2251.jpg,8,polystyrene
+viola_dataset\images\image_1253.jpg,4,glass
+viola_dataset\images\image_1078.jpg,3,disposable plates
+viola_dataset\images\image_1410.jpg,5,hard plastic
+viola_dataset\images\image_1072.jpg,3,disposable plates
+viola_dataset\images\image_489.jpg,1,batteries
+viola_dataset\images\image_2632.jpg,9,soft plastics
+viola_dataset\images\image_2061.jpg,6,paper
+viola_dataset\images\image_1096.jpg,3,disposable plates
+viola_dataset\images\image_634.jpg,2,cardboard
+viola_dataset\images\image_361.jpg,1,batteries
+viola_dataset\images\image_2137.jpg,6,paper
+viola_dataset\images\image_48.jpg,0,aluminium
+viola_dataset\images\image_1911.jpg,7,paper towel
+viola_dataset\images\image_1875.jpg,7,paper towel
+viola_dataset\images\image_1834.jpg,7,paper towel
+viola_dataset\images\image_2692.jpg,9,soft plastics
+viola_dataset\images\image_2235.jpg,8,polystyrene
+viola_dataset\images\image_501.jpg,1,batteries
+viola_dataset\images\image_2134.jpg,6,paper
+viola_dataset\images\image_2231.jpg,6,paper
+viola_dataset\images\image_506.jpg,1,batteries
+viola_dataset\images\image_493.jpg,1,batteries
+viola_dataset\images\image_2464.jpg,8,polystyrene
+viola_dataset\images\image_2958.jpg,10,takeaway cups
+viola_dataset\images\image_950.jpg,3,disposable plates
+viola_dataset\images\image_1218.jpg,4,glass
+viola_dataset\images\image_2538.jpg,9,soft plastics
+viola_dataset\images\image_2800.jpg,9,soft plastics
+viola_dataset\images\image_1947.jpg,7,paper towel
+viola_dataset\images\image_2262.jpg,8,polystyrene
+viola_dataset\images\image_2540.jpg,9,soft plastics
+viola_dataset\images\image_1640.jpg,5,hard plastic
+viola_dataset\images\image_1700.jpg,7,paper towel
+viola_dataset\images\image_3092.jpg,10,takeaway cups
+viola_dataset\images\image_1649.jpg,5,hard plastic
+viola_dataset\images\image_2035.jpg,6,paper
+viola_dataset\images\image_709.jpg,2,cardboard
+viola_dataset\images\image_2157.jpg,6,paper
+viola_dataset\images\image_1310.jpg,4,glass
+viola_dataset\images\image_2317.jpg,8,polystyrene
+viola_dataset\images\image_2141.jpg,6,paper
+viola_dataset\images\image_188.jpg,0,aluminium
+viola_dataset\images\image_1106.jpg,3,disposable plates
+viola_dataset\images\image_523.jpg,1,batteries
+viola_dataset\images\image_2662.jpg,9,soft plastics
+viola_dataset\images\image_3062.jpg,10,takeaway cups
+viola_dataset\images\image_2016.jpg,6,paper
+viola_dataset\images\image_2111.jpg,6,paper
+viola_dataset\images\image_2634.jpg,9,soft plastics
+viola_dataset\images\image_2186.jpg,6,paper
+viola_dataset\images\image_2370.jpg,8,polystyrene
+viola_dataset\images\image_1432.jpg,5,hard plastic
+viola_dataset\images\image_1958.jpg,7,paper towel
+viola_dataset\images\image_3064.jpg,10,takeaway cups
+viola_dataset\images\image_1797.jpg,7,paper towel
+viola_dataset\images\image_189.jpg,0,aluminium
+viola_dataset\images\image_565.jpg,1,batteries
+viola_dataset\images\image_2533.jpg,9,soft plastics
+viola_dataset\images\image_2904.jpg,10,takeaway cups
+viola_dataset\images\image_1141.jpg,4,glass
+viola_dataset\images\image_1968.jpg,7,paper towel
+viola_dataset\images\image_2396.jpg,8,polystyrene
+viola_dataset\images\image_2740.jpg,9,soft plastics
+viola_dataset\images\image_574.jpg,2,cardboard
+viola_dataset\images\image_2746.jpg,9,soft plastics
+viola_dataset\images\image_1971.jpg,7,paper towel
+viola_dataset\images\image_1242.jpg,4,glass
+viola_dataset\images\image_1714.jpg,7,paper towel
+viola_dataset\images\image_1054.jpg,3,disposable plates
+viola_dataset\images\image_2525.jpg,9,soft plastics
+viola_dataset\images\image_1312.jpg,4,glass
+viola_dataset\images\image_1552.jpg,5,hard plastic
+viola_dataset\images\image_2534.jpg,9,soft plastics
+viola_dataset\images\image_1629.jpg,5,hard plastic
+viola_dataset\images\image_730.jpg,2,cardboard
+viola_dataset\images\image_2172.jpg,6,paper
+viola_dataset\images\image_2169.jpg,6,paper
+viola_dataset\images\image_2362.jpg,8,polystyrene
+viola_dataset\images\image_731.jpg,2,cardboard
+viola_dataset\images\image_1092.jpg,3,disposable plates
+viola_dataset\images\image_1453.jpg,5,hard plastic
+viola_dataset\images\image_2156.jpg,6,paper
+viola_dataset\images\image_2462.jpg,8,polystyrene
+viola_dataset\images\image_1665.jpg,5,hard plastic
+viola_dataset\images\image_1487.jpg,5,hard plastic
+viola_dataset\images\image_272.jpg,1,batteries
+viola_dataset\images\image_1492.jpg,5,hard plastic
+viola_dataset\images\image_2893.jpg,10,takeaway cups
+viola_dataset\images\image_265.jpg,0,aluminium
+viola_dataset\images\image_2096.jpg,6,paper
+viola_dataset\images\image_1113.jpg,4,glass
+viola_dataset\images\image_743.jpg,2,cardboard
+viola_dataset\images\image_2357.jpg,8,polystyrene
+viola_dataset\images\image_2076.jpg,6,paper
+viola_dataset\images\image_1582.jpg,5,hard plastic
+viola_dataset\images\image_2181.jpg,6,paper
+viola_dataset\images\image_381.jpg,1,batteries
+viola_dataset\images\image_1555.jpg,5,hard plastic
+viola_dataset\images\image_1443.jpg,5,hard plastic
+viola_dataset\images\image_3026.jpg,10,takeaway cups
+viola_dataset\images\image_2428.jpg,8,polystyrene
+viola_dataset\images\image_254.jpg,0,aluminium
+viola_dataset\images\image_844.jpg,3,disposable plates
+viola_dataset\images\image_1573.jpg,5,hard plastic
+viola_dataset\images\image_1331.jpg,4,glass
+viola_dataset\images\image_522.jpg,1,batteries
+viola_dataset\images\image_1816.jpg,7,paper towel
+viola_dataset\images\image_1055.jpg,3,disposable plates
+viola_dataset\images\image_476.jpg,1,batteries
+viola_dataset\images\image_1966.jpg,7,paper towel
+viola_dataset\images\image_1887.jpg,7,paper towel
+viola_dataset\images\image_1526.jpg,5,hard plastic
+viola_dataset\images\image_2663.jpg,9,soft plastics
+viola_dataset\images\image_2912.jpg,10,takeaway cups
+viola_dataset\images\image_895.jpg,3,disposable plates
+viola_dataset\images\image_1391.jpg,4,glass
+viola_dataset\images\image_1851.jpg,7,paper towel
+viola_dataset\images\image_1495.jpg,5,hard plastic
+viola_dataset\images\image_1927.jpg,7,paper towel
+viola_dataset\images\image_1175.jpg,4,glass
+viola_dataset\images\image_2988.jpg,10,takeaway cups
+viola_dataset\images\image_2506.jpg,8,polystyrene
+viola_dataset\images\image_1674.jpg,5,hard plastic
+viola_dataset\images\image_1706.jpg,7,paper towel
+viola_dataset\images\image_557.jpg,1,batteries
+viola_dataset\images\image_1890.jpg,7,paper towel
+viola_dataset\images\image_249.jpg,0,aluminium
+viola_dataset\images\image_886.jpg,3,disposable plates
+viola_dataset\images\image_106.jpg,0,aluminium
+viola_dataset\images\image_698.jpg,2,cardboard
+viola_dataset\images\image_1053.jpg,3,disposable plates
+viola_dataset\images\image_1694.jpg,7,paper towel
+viola_dataset\images\image_630.jpg,2,cardboard
+viola_dataset\images\image_2892.jpg,10,takeaway cups
+viola_dataset\images\image_617.jpg,2,cardboard
+viola_dataset\images\image_2871.jpg,10,takeaway cups
+viola_dataset\images\image_2536.jpg,9,soft plastics
+viola_dataset\images\image_449.jpg,1,batteries
+viola_dataset\images\image_590.jpg,2,cardboard
+viola_dataset\images\image_1445.jpg,5,hard plastic
+viola_dataset\images\image_2933.jpg,10,takeaway cups
+viola_dataset\images\image_2259.jpg,8,polystyrene
+viola_dataset\images\image_1383.jpg,4,glass
+viola_dataset\images\image_1163.jpg,4,glass
+viola_dataset\images\image_639.jpg,2,cardboard
+viola_dataset\images\image_2948.jpg,10,takeaway cups
+viola_dataset\images\image_2229.jpg,6,paper
+viola_dataset\images\image_2641.jpg,9,soft plastics
+viola_dataset\images\image_706.jpg,2,cardboard
+viola_dataset\images\image_317.jpg,1,batteries
+viola_dataset\images\image_3044.jpg,10,takeaway cups
+viola_dataset\images\image_2671.jpg,9,soft plastics
+viola_dataset\images\image_1509.jpg,5,hard plastic
+viola_dataset\images\image_2743.jpg,9,soft plastics
+viola_dataset\images\image_2880.jpg,10,takeaway cups
+viola_dataset\images\image_1523.jpg,5,hard plastic
+viola_dataset\images\image_2574.jpg,9,soft plastics
+viola_dataset\images\image_59.jpg,0,aluminium
+viola_dataset\images\image_50.jpg,0,aluminium
+viola_dataset\images\image_651.jpg,2,cardboard
+viola_dataset\images\image_3076.jpg,10,takeaway cups
+viola_dataset\images\image_570.jpg,2,cardboard
+viola_dataset\images\image_795.jpg,2,cardboard
+viola_dataset\images\image_920.jpg,3,disposable plates
+viola_dataset\images\image_2282.jpg,8,polystyrene
+viola_dataset\images\image_1628.jpg,5,hard plastic
+viola_dataset\images\image_87.jpg,0,aluminium
+viola_dataset\images\image_1322.jpg,4,glass
+viola_dataset\images\image_2058.jpg,6,paper
+viola_dataset\images\image_1369.jpg,4,glass
+viola_dataset\images\image_1420.jpg,5,hard plastic
+viola_dataset\images\image_13.jpg,0,aluminium
+viola_dataset\images\image_228.jpg,0,aluminium
+viola_dataset\images\image_1992.jpg,6,paper
+viola_dataset\images\image_2618.jpg,9,soft plastics
+viola_dataset\images\image_1522.jpg,5,hard plastic
+viola_dataset\images\image_235.jpg,0,aluminium
+viola_dataset\images\image_2281.jpg,8,polystyrene
+viola_dataset\images\image_622.jpg,2,cardboard
+viola_dataset\images\image_1075.jpg,3,disposable plates
+viola_dataset\images\image_1202.jpg,4,glass
+viola_dataset\images\image_1229.jpg,4,glass
+viola_dataset\images\image_462.jpg,1,batteries
+viola_dataset\images\image_301.jpg,1,batteries
+viola_dataset\images\image_1423.jpg,5,hard plastic
+viola_dataset\images\image_846.jpg,3,disposable plates
+viola_dataset\images\image_218.jpg,0,aluminium
+viola_dataset\images\image_343.jpg,1,batteries
+viola_dataset\images\image_1150.jpg,4,glass
+viola_dataset\images\image_1129.jpg,4,glass
+viola_dataset\images\image_191.jpg,0,aluminium
+viola_dataset\images\image_2420.jpg,8,polystyrene
+viola_dataset\images\image_1794.jpg,7,paper towel
+viola_dataset\images\image_2561.jpg,9,soft plastics
+viola_dataset\images\image_1204.jpg,4,glass
+viola_dataset\images\image_1999.jpg,6,paper
+viola_dataset\images\image_219.jpg,0,aluminium
+viola_dataset\images\image_1976.jpg,7,paper towel
+viola_dataset\images\image_2204.jpg,6,paper
+viola_dataset\images\image_594.jpg,2,cardboard
+viola_dataset\images\image_1046.jpg,3,disposable plates
+viola_dataset\images\image_1123.jpg,4,glass
+viola_dataset\images\image_1181.jpg,4,glass
+viola_dataset\images\image_2876.jpg,10,takeaway cups
+viola_dataset\images\image_733.jpg,2,cardboard
+viola_dataset\images\image_1819.jpg,7,paper towel
+viola_dataset\images\image_2875.jpg,10,takeaway cups
+viola_dataset\images\image_1742.jpg,7,paper towel
+viola_dataset\images\image_421.jpg,1,batteries
+viola_dataset\images\image_2971.jpg,10,takeaway cups
+viola_dataset\images\image_444.jpg,1,batteries
+viola_dataset\images\image_431.jpg,1,batteries
+viola_dataset\images\image_2478.jpg,8,polystyrene
+viola_dataset\images\image_2378.jpg,8,polystyrene
+viola_dataset\images\image_1292.jpg,4,glass
+viola_dataset\images\image_1488.jpg,5,hard plastic
+viola_dataset\images\image_840.jpg,3,disposable plates
+viola_dataset\images\image_58.jpg,0,aluminium
+viola_dataset\images\image_1223.jpg,4,glass
+viola_dataset\images\image_728.jpg,2,cardboard
+viola_dataset\images\image_1712.jpg,7,paper towel
+viola_dataset\images\image_2706.jpg,9,soft plastics
+viola_dataset\images\image_1574.jpg,5,hard plastic
+viola_dataset\images\image_2973.jpg,10,takeaway cups
+viola_dataset\images\image_2368.jpg,8,polystyrene
+viola_dataset\images\image_2237.jpg,8,polystyrene
+viola_dataset\images\image_2834.jpg,10,takeaway cups
+viola_dataset\images\image_2010.jpg,6,paper
+viola_dataset\images\image_54.jpg,0,aluminium
+viola_dataset\images\image_1009.jpg,3,disposable plates
+viola_dataset\images\image_372.jpg,1,batteries
+viola_dataset\images\image_837.jpg,2,cardboard
+viola_dataset\images\image_2268.jpg,8,polystyrene
+viola_dataset\images\image_2751.jpg,9,soft plastics
+viola_dataset\images\image_2827.jpg,10,takeaway cups
+viola_dataset\images\image_292.jpg,1,batteries
+viola_dataset\images\image_948.jpg,3,disposable plates
+viola_dataset\images\image_2441.jpg,8,polystyrene
